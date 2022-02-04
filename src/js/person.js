@@ -17,6 +17,8 @@ export class Person {
         return (this.mercuryLifeExpectancy - this.mercuryYears);
       case "Venus":
         return (this.venusLifeExpectancy - this.venusYears);
+      case "Mars":
+        return (this.marsLifeExpectancy - this.marsYears);
     }
   }
 }
