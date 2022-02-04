@@ -24,10 +24,10 @@ describe("Person", () => {
     expect(aPerson.venusYears).toEqual(89);
   });
 
-  // test("Should calculate the age in Mars years", () => {
-  //   aPerson.calcMars();
-  //   expect(aPerson.marsYears).toEqual(103.4);
-  // });
+  test("Should calculate the age in Mars years", () => {
+    aPerson.calcMars();
+    expect(aPerson.marsYears).toEqual(29);
+  });
 
   // test("Should calculate the age in Jupiter years", () => {
   //   aPerson.calcJupiter();
