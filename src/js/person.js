@@ -8,11 +8,11 @@ export class Person {
   }
 
   calcMercury() {
-    this.mercuryYears = parseInt((this.earthAge / .24));
+    this.mercuryYears = parseInt(Math.round(parseFloat((this.earthAge / .24))));
   }
-  // calcVenus() {
-  //   this.venusYears = parseFloat((this.earthAge * .62).toFixed(2));
-  // }
+  calcVenus() {
+    this.venusYears = parseInt(Math.round(parseFloat((this.earthAge / .62))));
+  }
   // calcMars() {
   //   this.marsYears = parseFloat((this.earthAge * 1.88).toFixed(2));
   // }
