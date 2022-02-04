@@ -17,6 +17,7 @@ describe("Person", () => {
     expect(aPerson.earthLifeExpectancy).toEqual(78);
   });
 
+  //Mercury
   test("Should calculate the age in Mercury years", () => {
     aPerson.mercuryYears = aPerson.planetCalc(aPerson.earthAge, .24);
     expect(aPerson.mercuryYears).toEqual(229);
@@ -27,6 +28,13 @@ describe("Person", () => {
     expect(aPerson.mercuryLifeExpectancy).toEqual(325);
   });
 
+  test("Should return how many years they have left in Mercury Years", () => {
+    aPerson.mercuryYears = aPerson.planetCalc(aPerson.earthAge, .24);
+    aPerson.mercuryLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, .24);
+    expect(aPerson.getYearsLeft("Mercury")).toEqual(96);
+  });
+
+  //Venus
   test("Should calculate the age in Venus years", () => {
     aPerson.venusYears = aPerson.planetCalc(aPerson.earthAge, .62);
     expect(aPerson.venusYears).toEqual(88);
@@ -37,6 +45,14 @@ describe("Person", () => {
     expect(aPerson.venusLifeExpectancy).toEqual(125);
   });
 
+  test("Should return how many years they have left in Venus Years", () => {
+    aPerson.venusYears = aPerson.planetCalc(aPerson.earthAge, .62);
+    aPerson.venusLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, .62);
+    expect(aPerson.getYearsLeft("Venus")).toEqual(37);
+  });
+
+
+  //Mars
   test("Should calculate the age in Mars years", () => {
     aPerson.marsYears = aPerson.planetCalc(aPerson.earthAge, 1.88);
     expect(aPerson.marsYears).toEqual(29);
@@ -47,6 +63,8 @@ describe("Person", () => {
     expect(aPerson.marsLifeExpectancy).toEqual(41);
   });
 
+
+  //Jupiter
   test("Should calculate the age in Jupiter years", () => {
     aPerson.jupiterYears = aPerson.planetCalc(aPerson.earthAge, 11.86);
     expect(aPerson.jupiterYears).toEqual(4);
@@ -55,12 +73,6 @@ describe("Person", () => {
   test("Should calculate the expected life age in Jupiter years", () => {
     aPerson.jupiterLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, 11.86);
     expect(aPerson.jupiterLifeExpectancy).toEqual(6);
-  });
-
-  test("Should return how many years they have left in Mercury Years", () => {
-    aPerson.mercuryYears = aPerson.planetCalc(aPerson.earthAge, .24);
-    aPerson.mercuryLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, .24);
-    expect(aPerson.getYearsLeft("Mercury")).toEqual(106);
   });
 
 });
