@@ -10,4 +10,7 @@ export class Person {
   calcVenus() {
     this.venusYears = (this.earthAge * .62);
   }
+  calcMars() {
+    this.marsYears = parseFloat((this.earthAge * 1.88).toFixed(2));
+  }
 }
