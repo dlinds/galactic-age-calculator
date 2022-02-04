@@ -3,9 +3,14 @@ import { calculateLifeExpectancy } from "../src/js/lifeExpectancy.js";
 
 describe("Person", () => {
   let aPerson;
+  let aSecondPerson;
   beforeEach(() => {
     aPerson = new Person("Bob", 55, "desert", 2200, "coffee");
     aPerson.earthLifeExpectancy = calculateLifeExpectancy(aPerson.climate, aPerson.dailyCalories, aPerson.coffeeOrTea);
+
+    aSecondPerson = new Person("Jane", 80, "desert", 2200, "coffee");
+    aSecondPerson.earthLifeExpectancy = calculateLifeExpectancy(aSecondPerson.climate, aSecondPerson.dailyCalories, aSecondPerson.coffeeOrTea);
+
   });
   
   test("Should create a person with a name and an earth age", () => {
@@ -32,6 +37,22 @@ describe("Person", () => {
     aPerson.mercuryYears = aPerson.planetCalc(aPerson.earthAge, .24);
     aPerson.mercuryLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, .24);
     expect(aPerson.getYearsLeft("Mercury")).toEqual(96);
+  });
+
+  test("Should calculate the age of aSecondPerson in Mercury years", () => {
+    aSecondPerson.mercuryYears = aSecondPerson.planetCalc(aSecondPerson.earthAge, .24);
+    expect(aSecondPerson.mercuryYears).toEqual(333);
+  });
+
+  test("Should calculate the expected life age of aSecondPerson in Mercury years", () => {
+    aSecondPerson.mercuryLifeExpectancy = aSecondPerson.planetCalc(aSecondPerson.earthLifeExpectancy, .24);
+    expect(aSecondPerson.mercuryLifeExpectancy).toEqual(325);
+  });
+
+  test("Should return how many years aSecondPerson has left in Mercury Years", () => {
+    aSecondPerson.mercuryYears = aSecondPerson.planetCalc(aSecondPerson.earthAge, .24);
+    aSecondPerson.mercuryLifeExpectancy = aSecondPerson.planetCalc(aSecondPerson.earthLifeExpectancy, .24);
+    expect(aSecondPerson.getYearsLeft("Mercury")).toEqual(-8);
   });
 
   //Venus
