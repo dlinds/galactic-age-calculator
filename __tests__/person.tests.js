@@ -31,7 +31,7 @@ describe("Person", () => {
 
   // test("Should calculate the age in Jupiter years", () => {
   //   aPerson.calcJupiter();
-  //   expect(aPerson.jupiterYears).toEqual(652.3);
+  //   expect(aPerson.jupiterYears).toEqual(5);
   // });
 
 });

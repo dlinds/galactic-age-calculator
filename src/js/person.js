@@ -13,10 +13,10 @@ export class Person {
   calcVenus() {
     this.venusYears = parseInt(Math.round(parseFloat((this.earthAge / .62))));
   }
-  // calcMars() {
-  //   this.marsYears = parseFloat((this.earthAge * 1.88).toFixed(2));
-  // }
+  calcMars() {
+    this.marsYears = parseInt(Math.round(parseFloat((this.earthAge / 1.88))));
+  }
   // calcJupiter() {
-  //   this.jupiterYears = parseFloat((this.earthAge * 11.86).toFixed(2));
+  //   this.jupiterYears = parseInt(Math.round(parseFloat((this.earthAge / 11.86))));
   // }
 }
