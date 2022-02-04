@@ -32,6 +32,11 @@ describe("Person", () => {
     expect(aPerson.venusYears).toEqual(89);
   });
 
+  test("Should calculate the expected life age in Venus years", () => {
+    aPerson.venusLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, .62);
+    expect(aPerson.venusLifeExpectancy).toEqual(126);
+  });
+
   test("Should calculate the age in Mars years", () => {
     aPerson.marsYears = aPerson.planetCalc(aPerson.earthAge, 1.88);
     expect(aPerson.marsYears).toEqual(29);
