@@ -16,7 +16,7 @@ export class Person {
   calcMars() {
     this.marsYears = parseInt(Math.round(parseFloat((this.earthAge / 1.88))));
   }
-  // calcJupiter() {
-  //   this.jupiterYears = parseInt(Math.round(parseFloat((this.earthAge / 11.86))));
-  // }
+  calcJupiter() {
+    this.jupiterYears = parseInt(Math.round(parseFloat((this.earthAge / 11.86))));
+  }
 }
