@@ -20,13 +20,60 @@
 * _Babel_
 
 # Description
-This application will calculate the age of a person on Mercury, Venus, Mars, and Jupiter. Once the age has been calculated, life expectancy on Earth will be calculated and then translated to life expectancy on the previously mentioned planets. Life expectancy is calculated based on the following factors:  
- 
-1. What type of climate they live in
-2. How many calories they consume per day
-3. Preference for coffee or tea   
+This application will calculate the age of a person on Mercury, Venus, Mars, and Jupiter. Once the age has been calculated, life expectancy on Earth will be calculated and then translated to life expectancy on the previously mentioned planets.  
 <br>
+_Life expectancy is calculated based on the adding following factors:_  
+ 
+1. **What type of climate they live in**
+    <table>
+        <tr>
+            <td>Desert</td>
+            <td>Tropical</td>
+            <td>Plains</td>
+        </tr>
+        <tr>
+            <td>45 Years</td>
+            <td>50 Years</td>
+            <td>55 Years</td>
+        </tr>
+    </table>  
 
+2. **How many calories they consume per day** _(+20 years at 2000 calories, -1 year for every extra 100 calories and +1 year for each 100 calorie per day drop.)_
+    <table>
+        <tr>
+            <td>1600 Cal</td>
+            <td>1800 Cal</td>
+            <td>1900 Cal</td>
+            <td>2000 Cal</td>
+            <td>2100 Cal</td>
+            <td>2200 Cal</td>
+            <td>2400 Cal</td>
+        </tr>
+        <tr>
+            <td>24 Years</td>
+            <td>22 Years</td>
+            <td>21 Years</td>
+            <td>20 Years</td>
+            <td>19 Years</td>
+            <td>18 Years</td>
+            <td>16 Years</td>
+        </tr>
+    </table>
+3. **Preference for coffee or tea**   
+    <table>
+        <tr>
+            <td>Coffee</td>
+            <td>Tea</td>
+        </tr>
+        <tr>
+            <td>15 Years</td>
+            <td>20 Years</td>
+        </tr>
+    </table>
+
+For example, a person who lives in the desert, consumes 2200 calories a day, and prefers coffee, would have a life expectancy of 78 years on Earth.   
+<br>
+  
 # Setup/Installation Requirements
 
 There are two ways to access this project.  
