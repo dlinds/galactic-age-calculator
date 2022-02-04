@@ -15,6 +15,8 @@ export class Person {
     switch (planet) {
       case "Mercury":
         return (this.mercuryLifeExpectancy - this.mercuryYears);
+      case "Venus":
+        return (this.venusLifeExpectancy - this.venusYears);
     }
   }
 }
