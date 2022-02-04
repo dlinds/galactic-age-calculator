@@ -24,7 +24,7 @@ This application will calculate the age of a person on Mercury, Venus, Mars, and
  
 1. What type of climate they live in
 2. How many calories they consume per day
-3. Preference for the beach or for the forest  
+3. Preference for coffee or tea   
 <br>
 
 # Setup/Installation Requirements
