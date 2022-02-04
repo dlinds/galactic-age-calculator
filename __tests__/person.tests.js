@@ -72,7 +72,7 @@ describe("Person", () => {
     expect(aPerson.getYearsLeft("Venus")).toEqual(37);
   });
 
-  test("Should return how many years aSecondPerson has left in Mercury Years", () => { 
+  test("Should return how many years aSecondPerson has left in Venus Years", () => { 
     aSecondPerson.venusYears = aSecondPerson.planetCalc(aSecondPerson.earthAge, .62);
     aSecondPerson.venusLifeExpectancy = aSecondPerson.planetCalc(aSecondPerson.earthLifeExpectancy, .62);
     expect(aSecondPerson.venusYears).toEqual(129);
@@ -96,6 +96,14 @@ describe("Person", () => {
     aPerson.marsYears = aPerson.planetCalc(aPerson.earthAge, 1.88);
     aPerson.marsLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, 1.88);
     expect(aPerson.getYearsLeft("Mars")).toEqual(12);
+  });
+
+  test("Should return how many years aSecondPerson has left in Mars Years", () => { 
+    aSecondPerson.marsYears = aSecondPerson.planetCalc(aSecondPerson.earthAge, 1.88);
+    aSecondPerson.marsLifeExpectancy = aSecondPerson.planetCalc(aSecondPerson.earthLifeExpectancy, 1.88);
+    expect(aSecondPerson.marsYears).toEqual(42);
+    expect(aSecondPerson.marsLifeExpectancy).toEqual(41);
+    expect(aSecondPerson.getYearsLeft("Mars")).toEqual(-1);
   });
 
 
