@@ -14,30 +14,27 @@ describe("Person", () => {
     expect(aPerson.climate).toEqual("desert");
     expect(aPerson.dailyCalories).toEqual(2200);
     expect(aPerson.coffeeOrTea).toEqual("coffee");
+    expect(aPerson.lifeExpectancyEarth).toEqual(78);
   });
 
   test("Should calculate the age in Mercury years", () => {
-    aPerson.calcMercury();
+    aPerson.mercuryYears = aPerson.planetCalc(.24);
     expect(aPerson.mercuryYears).toEqual(229);
   });
 
   test("Should calculate the age in Venus years", () => {
-    aPerson.calcVenus();
+    aPerson.venusYears = aPerson.planetCalc(.62);
     expect(aPerson.venusYears).toEqual(89);
   });
 
   test("Should calculate the age in Mars years", () => {
-    aPerson.calcMars();
+    aPerson.marsYears = aPerson.planetCalc(1.88);
     expect(aPerson.marsYears).toEqual(29);
   });
 
   test("Should calculate the age in Jupiter years", () => {
-    aPerson.calcJupiter();
+    aPerson.jupiterYears = aPerson.planetCalc(11.86);
     expect(aPerson.jupiterYears).toEqual(5);
-  });
-
-  test("Should calculate a life expectancy in Earth years", () => {
-    expect(aPerson.lifeExpectancyEarth).toEqual(78);
   });
 
 });

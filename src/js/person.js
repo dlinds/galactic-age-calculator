@@ -7,16 +7,7 @@ export class Person {
     this.coffeeOrTea = coffeeOrTea;
   }
 
-  calcMercury() {
-    this.mercuryYears = parseInt(Math.round(parseFloat((this.earthAge / .24))));
-  }
-  calcVenus() {
-    this.venusYears = parseInt(Math.round(parseFloat((this.earthAge / .62))));
-  }
-  calcMars() {
-    this.marsYears = parseInt(Math.round(parseFloat((this.earthAge / 1.88))));
-  }
-  calcJupiter() {
-    this.jupiterYears = parseInt(Math.round(parseFloat((this.earthAge / 11.86))));
+  planetCalc(numToCalc) {
+    return parseInt(Math.round(parseFloat((this.earthAge / numToCalc))));
   }
 }
