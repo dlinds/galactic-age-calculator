@@ -1,7 +1,10 @@
 export class Person {
-  constructor(name, earthAge) {
+  constructor(name, earthAge, climate, dailyCalories, coffeeOrTea) {
     this.name = name;
     this.earthAge = earthAge;
+    this.climate = climate;
+    this.dailyCalories = dailyCalories;
+    this.coffeeOrTea = coffeeOrTea;
   }
 
   calcMercury() {
