@@ -16,7 +16,7 @@ describe("Person", () => {
 
   test("Should calculate the age in Mercury years", () => {
     aPerson.calcMercury();
-    expect(aPerson.mercuryYears).toEqual(13.2);
+    expect(aPerson.mercuryYears).toEqual(342);
   });
 
   // test("Should calculate the age in Venus years", () => {
