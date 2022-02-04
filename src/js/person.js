@@ -7,7 +7,14 @@ export class Person {
     this.coffeeOrTea = coffeeOrTea;
   }
 
-  planetCalc(numToCalc) {
-    return parseInt(Math.round(parseFloat((this.earthAge / numToCalc))));
+  planetCalc(age, numToCalc) {
+    return parseInt(age / numToCalc);
+  }
+
+  getYearsLeft(planet) {
+    switch (planet) {
+      case "Mercury":
+        return (this.mercuryLifeExpectancy - this.mercuryYears);
+    }
   }
 }
