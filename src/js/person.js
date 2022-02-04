@@ -8,7 +8,8 @@ export class Person {
   }
 
   calcMercury() {
-    this.mercuryYears = parseFloat((this.earthAge * .24).toFixed(2));
+    let earthDays = 365 * this.earthAge;
+    this.mercuryYears = parseInt(earthDays / 58.6);
   }
   // calcVenus() {
   //   this.venusYears = parseFloat((this.earthAge * .62).toFixed(2));
