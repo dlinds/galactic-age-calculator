@@ -5,10 +5,10 @@ export class Person {
   }
 
   calcMercury() {
-    this.mercuryYears = (this.earthAge * .24);
+    this.mercuryYears = parseFloat((this.earthAge * .24).toFixed(2));
   }
   calcVenus() {
-    this.venusYears = (this.earthAge * .62);
+    this.venusYears = parseFloat((this.earthAge * .62).toFixed(2));
   }
   calcMars() {
     this.marsYears = parseFloat((this.earthAge * 1.88).toFixed(2));
