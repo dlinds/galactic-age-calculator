@@ -19,19 +19,19 @@ describe("Person", () => {
     expect(aPerson.mercuryYears).toEqual(13.2);
   });
 
-  test("Should calculate the age in Venus years", () => {
-    aPerson.calcVenus();
-    expect(aPerson.venusYears).toEqual(34.1);
-  });
+  // test("Should calculate the age in Venus years", () => {
+  //   aPerson.calcVenus();
+  //   expect(aPerson.venusYears).toEqual(34.1);
+  // });
 
-  test("Should calculate the age in Mars years", () => {
-    aPerson.calcMars();
-    expect(aPerson.marsYears).toEqual(103.4);
-  });
+  // test("Should calculate the age in Mars years", () => {
+  //   aPerson.calcMars();
+  //   expect(aPerson.marsYears).toEqual(103.4);
+  // });
 
-  test("Should calculate the age in Jupiter years", () => {
-    aPerson.calcJupiter();
-    expect(aPerson.jupiterYears).toEqual(652.3);
-  });
+  // test("Should calculate the age in Jupiter years", () => {
+  //   aPerson.calcJupiter();
+  //   expect(aPerson.jupiterYears).toEqual(652.3);
+  // });
 
 });
