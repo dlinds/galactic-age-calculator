@@ -19,10 +19,10 @@ describe("Person", () => {
     expect(aPerson.mercuryYears).toEqual(229);
   });
 
-  // test("Should calculate the age in Venus years", () => {
-  //   aPerson.calcVenus();
-  //   expect(aPerson.venusYears).toEqual(34.1);
-  // });
+  test("Should calculate the age in Venus years", () => {
+    aPerson.calcVenus();
+    expect(aPerson.venusYears).toEqual(89);
+  });
 
   // test("Should calculate the age in Mars years", () => {
   //   aPerson.calcMars();
