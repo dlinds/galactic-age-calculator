@@ -63,6 +63,12 @@ describe("Person", () => {
     expect(aPerson.marsLifeExpectancy).toEqual(41);
   });
 
+  test("Should return how many years they have left in Mars Years", () => {
+    aPerson.marsYears = aPerson.planetCalc(aPerson.earthAge, 1.88);
+    aPerson.marsLifeExpectancy = aPerson.planetCalc(aPerson.earthLifeExpectancy, 1.88);
+    expect(aPerson.getYearsLeft("Mars")).toEqual(12);
+  });
+
 
   //Jupiter
   test("Should calculate the age in Jupiter years", () => {
