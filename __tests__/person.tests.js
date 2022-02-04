@@ -1,9 +1,11 @@
 import { Person } from "../src/js/person.js";
+import { calculateLifeExpectancy } from "../src/js/lifeExpectancy.js";
 
 describe("Person", () => {
   let aPerson;
   beforeEach(() => {
     aPerson = new Person("Bob", 55, "desert", 2200, "coffee");
+    aPerson.lifeExpectancyEarth = calculateLifeExpectancy(aPerson.climate, aPerson.dailyCalories, aPerson.coffeeOrTea);
   });
   
   test("Should create a person with a name and an earth age", () => {
@@ -32,6 +34,10 @@ describe("Person", () => {
   test("Should calculate the age in Jupiter years", () => {
     aPerson.calcJupiter();
     expect(aPerson.jupiterYears).toEqual(5);
+  });
+
+  test("Should calculate a life expectancy in Earth years", () => {
+    expect(aPerson.lifeExpectancyEarth).toEqual(78);
   });
 
 });
