@@ -124,4 +124,12 @@ describe("Person", () => {
     expect(aPerson.getYearsLeft("Jupiter")).toEqual(2);
   });
 
+  test("Should return how many years aSecondPerson has left in Jupiter Years", () => { 
+    aSecondPerson.jupiterYears = aSecondPerson.planetCalc(aSecondPerson.earthAge, 11.86);
+    aSecondPerson.jupiterLifeExpectancy = aSecondPerson.planetCalc(aSecondPerson.earthLifeExpectancy, 11.86);
+    expect(aSecondPerson.jupiterYears).toEqual(6);
+    expect(aSecondPerson.jupiterLifeExpectancy).toEqual(6);
+    expect(aSecondPerson.getYearsLeft("Jupiter")).toEqual(0);
+  });
+
 });
