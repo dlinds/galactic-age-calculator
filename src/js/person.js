@@ -24,9 +24,9 @@ export class Person {
     }
   }
 
-  calculateLifeExpectancy (climate, dailyCalories, coffeeOrTea) {
+  calculateLifeExpectancy () {
     let expectedAge = 0;
-    switch (climate) {
+    switch (this.climate) {
       case "desert":
         expectedAge += 45;
         break;
@@ -37,16 +37,17 @@ export class Person {
         expectedAge += 55;
         break;
       default:
+        this.earthLifeExpectancy = false;
         return false;
     }
-    
-    expectedAge += (20 - (dailyCalories /= 100)) + 20;
+    let caloriesCount = this.dailyCalories;
+    expectedAge += (20 - (caloriesCount /= 100)) + 20;
   
-    if (coffeeOrTea === "coffee") {
+    if (this.coffeeOrTea === "coffee") {
       expectedAge += 15;
     } else {
       expectedAge += 20;
     }
-    return expectedAge;
+    this.earthLifeExpectancy = expectedAge;
   }
 }

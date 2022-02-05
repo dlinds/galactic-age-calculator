@@ -6,20 +6,13 @@ describe("Person", () => {
   let aSecondPerson;
   beforeEach(() => {
     aPerson = new Person("Bob", 55, "desert", 2200, "coffee");
-    aPerson.earthLifeExpectancy = aPerson.calculateLifeExpectancy(aPerson.climate, aPerson.dailyCalories, aPerson.coffeeOrTea);
+    aPerson.calculateLifeExpectancy();
 
     aSecondPerson = new Person("Jane", 80, "desert", 2200, "coffee");
-    aSecondPerson.earthLifeExpectancy = aPerson.calculateLifeExpectancy(aSecondPerson.climate, aSecondPerson.dailyCalories, aSecondPerson.coffeeOrTea);
+    aSecondPerson.calculateLifeExpectancy();
 
   });
 
-  test("Should return an estimated life expectancy", () => {
-    expect(aPerson.calculateLifeExpectancy("desert", 2200, "coffee")).toEqual(78);
-    expect(aPerson.calculateLifeExpectancy("tropical", 1800, "tea")).toEqual(92);
-    expect(aPerson.calculateLifeExpectancy("plains", 2000, "tea")).toEqual(95);
-    expect(aPerson.calculateLifeExpectancy("no climate", 2000, "tea")).toEqual(false);
-  });
-  
   test("Should create a person with a name and an earth age", () => {
     expect(aPerson.name).toEqual("Bob");
     expect(aPerson.earthAge).toEqual(55);
@@ -27,6 +20,24 @@ describe("Person", () => {
     expect(aPerson.dailyCalories).toEqual(2200);
     expect(aPerson.coffeeOrTea).toEqual("coffee");
     expect(aPerson.earthLifeExpectancy).toEqual(78);
+  });
+
+  test("Should return an estimated life expectancies with varying factors", () => {
+    let person2 = new Person("Bob", 55, "tropical", 1800, "tea");
+    person2.calculateLifeExpectancy();
+    expect(person2.earthLifeExpectancy).toEqual(92);
+  });
+  
+  test("Should return an estimated life expectancies with varying factors", () => {
+    let person3 = new Person("Bob", 55, "plains", 2000, "tea");
+    person3.calculateLifeExpectancy();
+    expect(person3.earthLifeExpectancy).toEqual(95);
+  });
+
+  test("Should return an estimated life expectancies with varying factors", () => {
+    let person4 = new Person("Bob", 55, "no climate", 2000, "tea");
+    person4.calculateLifeExpectancy();
+    expect(person4.earthLifeExpectancy).toEqual(false);
   });
 
   //Mercury
