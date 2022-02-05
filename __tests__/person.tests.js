@@ -1,16 +1,23 @@
 import { Person } from "../src/js/person.js";
-import { calculateLifeExpectancy } from "../src/js/lifeExpectancy.js";
+// import { calculateLifeExpectancy } from "../src/js/lifeExpectancy.js";
 
 describe("Person", () => {
   let aPerson;
   let aSecondPerson;
   beforeEach(() => {
     aPerson = new Person("Bob", 55, "desert", 2200, "coffee");
-    aPerson.earthLifeExpectancy = calculateLifeExpectancy(aPerson.climate, aPerson.dailyCalories, aPerson.coffeeOrTea);
+    aPerson.earthLifeExpectancy = aPerson.calculateLifeExpectancy(aPerson.climate, aPerson.dailyCalories, aPerson.coffeeOrTea);
 
     aSecondPerson = new Person("Jane", 80, "desert", 2200, "coffee");
-    aSecondPerson.earthLifeExpectancy = calculateLifeExpectancy(aSecondPerson.climate, aSecondPerson.dailyCalories, aSecondPerson.coffeeOrTea);
+    aSecondPerson.earthLifeExpectancy = aPerson.calculateLifeExpectancy(aSecondPerson.climate, aSecondPerson.dailyCalories, aSecondPerson.coffeeOrTea);
 
+  });
+
+  test("Should return an estimated life expectancy", () => {
+    expect(aPerson.calculateLifeExpectancy("desert", 2200, "coffee")).toEqual(78);
+    expect(aPerson.calculateLifeExpectancy("tropical", 1800, "tea")).toEqual(92);
+    expect(aPerson.calculateLifeExpectancy("plains", 2000, "tea")).toEqual(95);
+    expect(aPerson.calculateLifeExpectancy("no climate", 2000, "tea")).toEqual(false);
   });
   
   test("Should create a person with a name and an earth age", () => {
