@@ -13,6 +13,8 @@ export class Person {
 
   getYearsLeft(planet) {
     switch (planet) {
+      case "Earth":
+        return (this.earthLifeExpectancy - this.earthAge);
       case "Mercury":
         return (this.mercuryLifeExpectancy - this.mercuryYears);
       case "Venus":
@@ -26,7 +28,7 @@ export class Person {
 
   calculateLifeExpectancy () {
     let expectedAge = 0;
-    switch (this.climate) {
+    switch (this.climate.toLowerCase()) {
       case "desert":
         expectedAge += 45;
         break;
@@ -43,7 +45,7 @@ export class Person {
     let caloriesCount = this.dailyCalories;
     expectedAge += (20 - (caloriesCount /= 100)) + 20;
   
-    if (this.coffeeOrTea === "coffee") {
+    if (this.coffeeOrTea.toLowerCase() === "coffee") {
       expectedAge += 15;
     } else {
       expectedAge += 20;

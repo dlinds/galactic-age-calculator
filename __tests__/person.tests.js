@@ -22,22 +22,27 @@ describe("Person", () => {
     expect(aPerson.earthLifeExpectancy).toEqual(78);
   });
 
-  test("Should return an estimated life expectancies with varying factors", () => {
-    let person2 = new Person("Bob", 55, "tropical", 1800, "tea");
+  test("Should return Sharon's estimated life expectancies with varying factors", () => {
+    let person2 = new Person("Sharon", 55, "tropical", 1800, "tea");
     person2.calculateLifeExpectancy();
     expect(person2.earthLifeExpectancy).toEqual(92);
   });
-  
-  test("Should return an estimated life expectancies with varying factors", () => {
-    let person3 = new Person("Bob", 55, "plains", 2000, "tea");
+
+  test("Should return Jack's estimated life expectancies with varying factors", () => {
+    let person3 = new Person("Jack", 55, "plains", 2000, "tea");
     person3.calculateLifeExpectancy();
     expect(person3.earthLifeExpectancy).toEqual(95);
   });
 
-  test("Should return an estimated life expectancies with varying factors", () => {
-    let person4 = new Person("Bob", 55, "no climate", 2000, "tea");
+  test("Should return Ned's estimated life expectancies with varying factors", () => {
+    let person4 = new Person("Ned", 55, "no climate", 2000, "tea");
     person4.calculateLifeExpectancy();
     expect(person4.earthLifeExpectancy).toEqual(false);
+  });
+
+  
+  test("Should return how many years they have left in Earth Years", () => {
+    expect(aPerson.getYearsLeft("Earth")).toEqual(23);
   });
 
   //Mercury
