@@ -4,125 +4,156 @@
   <title>Galactic Age Calculator</title>
 </head>
 <body>
-  <div class="container">
-    <div class="form-group">
-      <label for="name">Enter in your name</label>
-      <input type="text" id="name" placeholder="Please enter in your name" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="age">Enter in your age</label>
-      <input id="age" type="number" min="1" step="1" max="120" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="climate">What kind of climate do you live in?</label>
-      <select id="climate" class="form-control">
-        <option disabled selected value>&nbsp;</option>
-        <option>Desert</option>
-        <option>Tropical</option>
-        <option>Plains</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="coffee-or-tea">Do you prefer Coffee or Tea?</label>
-      <select id="coffee-or-tea" class="form-control">
-        <option disabled selected value>&nbsp;</option>
-        <option>Coffee</option>
-        <option>Tea</option>
-      </select>
-    </div>
-    <div class="btn btn-dark" id="calculate-planet-values">Calculate My Age!</div>
-  </div>
-  <div class="container" id="planet-info-container">
-    <div class="row" id="earth-row">
-      <div class="col-3">
-        <h1 class="heading-1">Earth</h1>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">55 years old</h2>
-        <p>You are currently 55 years old on the planet earth</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">78 years</h2>
-        <p>Based on our algorithms, we expect you to live to be 78 years old.</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">23 years left</h2>
-        <p>We estimate you have 23 years left to live. Make the most of it!</p>
+  <div class="container" id="page-container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome!</h1>
+        <p class="lead">Welcome to the Galactic Planet Age Calculator</p>
       </div>
     </div>
-    <hr>
-    <div class="row" id="mercury-row">
-      <div class="col-3">
-        <h1 class="heading-1">Mercury</h1>
+    <div class="container">
+      <div class="form-group">
+        <label for="name">Enter in your name</label>
+        <input type="text" id="name" placeholder="Please enter in your name" class="form-control">
       </div>
-      <div class="col-3">
-        <h2 class="heading-2">320 years old</h2>
-        <p>You are currently 320 years old on the planet Mercury</p>
+      <div class="form-group">
+        <label for="age">Enter in your age</label>
+        <input id="age" type="number" min="1" step="1" max="120" class="form-control">
       </div>
-      <div class="col-3">
-        <h2 class="heading-2">400 years</h2>
-        <p>Based on our algorithms, we expect you to live to be 400 Mercury years old.</p>
+      <div class="form-group">
+        <label for="climate">What kind of climate do you live in?</label>
+        <select id="climate" class="form-control">
+          <option disabled selected value>&nbsp;</option>
+          <option>Desert</option>
+          <option>Tropical</option>
+          <option>Plains</option>
+        </select>
       </div>
-      <div class="col-3">
-        <h2 class="heading-2">80 years left</h2>
-        <p>We estimate you have 80 Mercury years left to live. Make the most of it!</p>
+      <div class="form-group">
+        <label for="calorie-count">What is your average daily calorie count?</label>
+        <select id="calorie-count" class="form-control">
+          <option disabled selected value>&nbsp;</option>
+          <option>1500</option>
+          <option>1600</option>
+          <option>1700</option>
+          <option>1800</option>
+          <option>1900</option>
+          <option>2000</option>
+          <option>2100</option>
+          <option>2200</option>
+          <option>2300</option>
+          <option>2400</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="coffee-or-tea">Do you prefer Coffee or Tea?</label>
+        <select id="coffee-or-tea" class="form-control">
+          <option disabled selected value>&nbsp;</option>
+          <option>Coffee</option>
+          <option>Tea</option>
+        </select>
+      </div>
+      <div class="btn btn-dark" id="calculate-planet-values">Calculate My Age!</div>
+    </div>
+    <div class="container planet-info-row" id="earth-info-container">
+      <div class="row" id="earth-row">
+        <div class="col-md-3">
+          <h1 class="heading-1">Earth</h1>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="earth-age-header"></span> years old</h2>
+          <p>You are currently <span id="earth-age-body"></span> years old on the planet Earth</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="earth-life-expectancy-header"></span> years</h2>
+          <p>Based on our algorithms, we expect you to live to be <span id="earth-life-expectancy-body"></span> years old.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="earth-years-left-header">years left</span> </h2>
+          <p>We estimate you have <span id="earth-years-left-body">years left to live </span>. Make the most of it!</p>
+        </div>
       </div>
     </div>
-    <hr>
-    <div class="row" id="earth-row">
-      <div class="col-3">
-        <h1 class="heading-1">Venus</h1>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">150 years old</h2>
-        <p>You are currently 150 years old on the planet Venus</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">220 years</h2>
-        <p>Based on our algorithms, we expect you to live to be 220 Venus years old.</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">70 years left</h2>
-        <p>We estimate you have 70 Venus years left to live. Make the most of it!</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row" id="earth-row">
-      <div class="col-3">
-        <h1 class="heading-1">Mars</h1>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">48 years old</h2>
-        <p>You are currently 48 years old on the planet earth</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">60 years</h2>
-        <p>Based on our algorithms, we expect you to live to be 60 Mars years old.</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">12 years left</h2>
-        <p>We estimate you have 12 years left to live. Make the most of it!</p>
+    <div class="container planet-info-row" id="mercury-info-container">
+      <hr>
+      <div class="row" id="mercury-row">
+        <div class="col-md-3">
+          <h1 class="heading-1">Mercury</h1>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="mercury-age-header"></span> years old</h2>
+          <p>You are currently <span id="mercury-age-body"></span> years old on the planet Mercury.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="mercury-life-expectancy-header"></span> Mercury years</h2>
+          <p>Based on our algorithms, we expect you to live to be <span id="mercury-life-expectancy-body"></span> Mercury years old.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="mercury-years-left-header">years left</span> </h2>
+          <p>We estimate you have <span id="mercury-years-left-body">years left to live </span>. Make the most of it!</p>
+        </div>
       </div>
     </div>
-    <hr>
-    <div class="row" id="earth-row">
-      <div class="col-3">
-        <h1 class="heading-1">Jupiter</h1>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">5 years old</h2>
-        <p>You are currently 5 years old on the planet Jupiter</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">7 years</h2>
-        <p>Based on our algorithms, we expect you to live to be 7 Jupiter years old.</p>
-      </div>
-      <div class="col-3">
-        <h2 class="heading-2">2 years left</h2>
-        <p>We estimate you have 2 Jupiter years left to live. Make the most of it!</p>
+    <div class="container planet-info-row" id="venus-info-container">
+      <hr>
+      <div class="row" id="venus-row">
+        <div class="col-md-3">
+          <h1 class="heading-1">Venus</h1>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="venus-age-header"></span> years old</h2>
+          <p>You are currently <span id="venus-age-body"></span> years old on the planet Venus.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="venus-life-expectancy-header"></span> Venus years</h2>
+          <p>Based on our algorithms, we expect you to live to be <span id="venus-life-expectancy-body"></span> Venus years old.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="venus-years-left-header">years left</span> </h2>
+          <p>We estimate you have <span id="venus-years-left-body">years left to live </span>. Make the most of it!</p>
+        </div>
       </div>
     </div>
-    
+    <div class="container planet-info-row" id="mars-info-container">
+      <hr>
+      <div class="row" id="mars-row">
+        <div class="col-md-3">
+          <h1 class="heading-1">Mars</h1>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="mars-age-header"></span> years old</h2>
+          <p>You are currently <span id="mars-age-body"></span> years old on the planet Mars.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="mars-life-expectancy-header"></span> Mars years</h2>
+          <p>Based on our algorithms, we expect you to live to be <span id="mars-life-expectancy-body"></span> Mars years old.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="mars-years-left-header">years left</span> </h2>
+          <p>We estimate you have <span id="mars-years-left-body">years left to live </span>. Make the most of it!</p>
+        </div>
+      </div>
+    </div>
+    <div class="container planet-info-row" id="jupiter-info-container">
+      <hr>
+      <div class="row" id="jupiter-row">
+        <div class="col-md-3">
+          <h1 class="heading-1">Jupiter</h1>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="jupiter-age-header"></span> years old</h2>
+          <p>You are currently <span id="jupiter-age-body"></span> years old on the planet Jupiter.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="jupiter-life-expectancy-header"></span> Jupiter years</h2>
+          <p>Based on our algorithms, we expect you to live to be <span id="jupiter-life-expectancy-body"></span> Jupiter years old.</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="heading-2"><span id="jupiter-years-left-header">years left</span> </h2>
+          <p>We estimate you have <span id="jupiter-years-left-body">years left to live </span>. Make the most of it!</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

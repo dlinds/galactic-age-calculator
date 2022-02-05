@@ -2,6 +2,11 @@ img {
   max-width: 100%;
 }
 
-#planet-info-container {
+#page-container {
+  margin-top: 5%;
+}
+
+.planet-info-row {
+  display: none;
   margin-top: 5%;
 }
