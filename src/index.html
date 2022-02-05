@@ -1,9 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <title>My Project</title>
+  <title>Galactic Age Calculator</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="form-group">
+      <label for="name">Enter in a name</label>
+      <input type="text" id="name" placeholder="Please enter in your name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="age">Enter in your age</label>
+      <input id="age" type="number" min="1" step="1" max="120" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="climate">What kind of climate do you live in?</label>
+      <select id="climate" class="form-control">
+        <option disabled selected value>&nbsp;</option>
+        <option>Desert</option>
+        <option>Tropical</option>
+        <option>Plains</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="coffee-or-tea">Do you prefer Coffee or Tea?</label>
+      <select id="coffee-or-tea" class="form-control">
+        <option disabled selected value>&nbsp;</option>
+        <option>Coffee</option>
+        <option>Tea</option>
+      </select>
+    </div>
+    <div class="btn btn-dark" id="calculate-planet-values">Calculate My Age!</div>
+  </div>
+  <div class="container" id="planet-info-container">
+    <div class="row">
+      <div class="col-5">
+        
+      </div>
+      <div class="col-2">
+        Earth
+      </div>
+      <div class="col-7">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        Mercury
+      </div>
+      <div class="col-3">
+        Venus
+      </div>
+      <div class="col-3">
+        Mars
+      </div>
+      <div class="col-3">
+        Jupiter
+      </div>
+    </div>
+  </div>
 </body>
 </html>
