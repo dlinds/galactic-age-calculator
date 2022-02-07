@@ -76,15 +76,8 @@ For example, a person who lives in the desert, consumes 2200 calories a day, and
   
 # Setup/Installation Requirements
 
-There are two ways to access this project.  
-* ## Preview the live site
-    _If you'd like, you can view a live version of this site in your browser. To do so,_
-    1. Open your browser
-    2. Navigate to the live site hosted on [Github Pages](https://dlinds.github.io/galactic-age-calculator/).  
-<br>
-
 * ## Cloning the repository
-    _Alternatively, you can launch the project from your own computer. To do so,_
+    
     1. First, you will need to access a terminal. The easiest way to do so on either OS X (Mac) or Windows is to install Visual Studio (VS) Code.
         *  [Windows](https://code.visualstudio.com/docs/?dv=win64user)
         *  [OS X](https://code.visualstudio.com/docs/?dv=osx)
