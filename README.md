@@ -93,8 +93,27 @@ For example, a person who lives in the desert, consumes 2200 calories a day, and
        * npm build
     9. In the file explorer on the left of VS Code, navigate to the **_dist_** directory.
     10. Right click index.html, and choose Reveal in File Explorer. This should take you to the folder on your computer where the repo is downloaded to.
-    11. Double click index.html to open in your browser.
+    11. Double click index.html to open in your browser.  
+<br>  
 
+    
+* ## Changing or Adding to the Code
+Should you wish to make any changes or additions to the code, be sure to run the tests in the **person.tests.js** file, located in the __ _tests_ __ directory. These tests are a series of inputs and outputs that determine whether or not the code is running as expected.
+    
+* Note that you will not be able to follow these directions without first having completed all steps in the **Cloning the repository** section above.  
+<br>
+
+Once you've made your additions or changes to the code, you'll want to confirm all previous tests are still passing. To run the tests, 
+
+   1. From within VS Code, open a terminal at the root directory of the project
+   2. Type the command  
+        **npm test**
+   3. A series of tests (those written out in the **person.tests.js** file) will then run.
+   4. Use these test results to determine whether or not the feature/change you are adding will break the current code base or not.  
+       * Currently, line coverage across all statements, branches, functions and lines are at 100%, with no uncovered lines. Before submitting any pull/push requests, please confirm that any changes you make do not affect the current set of tests. 
+<br>  
+  
+If you have any questions about the tests or this process, please send me a message me on Github.
 <br>
 
 # Known Bugs
